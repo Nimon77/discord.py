@@ -385,10 +385,15 @@ class View:
         """
         return True
 
-    async def on_timeout(self) -> None:
+    async def on_timeout(self, interaction: Optional[Interaction]) -> None:
         """|coro|
 
         A callback that is called when a view's timeout elapses without being explicitly stopped.
+
+        Parameters
+        -----------
+        interaction: :class:`~discord.Interaction`
+            The interaction that as timeout
         """
         pass
 
